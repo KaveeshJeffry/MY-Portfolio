@@ -139,14 +139,22 @@ html {
         -webkit-filter: blur(8px)
 
     }
-    .proj-images-l{
+        .proj-images{
         height: auto;
-        max-height: 25dvh;
-        width: auto;
-        max-width: 90dvw;
+        width: 75%;
+    }
+    .proj-images-l{
+        width: 75%;
+        height: auto;
     }
     .flash-div{
-        padding: 1dvi;
+        background-color: rgba(73, 73, 73, 0);
+    }
+    .flash-div:hover{
+        background-color:rgba(199, 46, 0, 0);
+        opacity: 1;
+        border-radius: 5px;
+        
     }
     
 
