@@ -134,7 +134,7 @@ html {
     }
     .img-2{
         
-        max-height: 58vh;
+        max-height: 50vh;
         filter: blur(8px);
         -webkit-filter: blur(8px)
 
