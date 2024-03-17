@@ -147,6 +147,7 @@ html {
     .proj-images-l{
         width: 75%;
         height: auto;
+        max-width: auto;
     }
     .flash-div{
         background-color: rgba(73, 73, 73, 0);
