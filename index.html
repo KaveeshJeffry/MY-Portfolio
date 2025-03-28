@@ -1,181 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS/Home.css">
-    <script src="Java Script/Home.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="CSS/Home.css" />
+  <title>Modern Portfolio</title>
 </head>
+
 <body>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">
-        <img src="Assets/arrow.svg" alt="my image" class="mx-auto d-block ">
-    </button>
-    <div  class=" col-12  navbar-inverse ">
-        <nav class="navbar container-fluid justify-content-center bg-light" >
-            <img src="Assets/IMG_20231119_211212.jpg" class="rounded " Style="width: 6vh; height: auto; ">
-        </nav>
-        <nav class=" navbar col-12 navbar-expand-lg navbar-light bg-light justify-content-center">
-            <ul class="nav justify-content-center  ">
-                <li class="nav-item  me-3">
-                    <button type="button" onclick="about()" class="btn btn-outline-secondary nav-btns">My Skills</button>
-                </li>
-                <li class="nav-item  me-3">
-                    <button type="button" onclick="projects()" class="btn btn-outline-secondary nav-btns">Projects</button>
-                </li>
-                <li class="nav-item  ">
-                    <button type="button" onclick="contact()" class="btn btn-outline-secondary nav-btns">Contact</button>
-                </li>
-                
-              </ul>
-          </nav>
+  <!-- Scroll-to-top button -->
+  <button onclick="topFunction()" id="myBtn" title="Go to top">
+    <img src="Assets/arrow.svg" alt="Top" style="width: 20px; height: 20px;" />
+  </button>
+
+  <!-- Header and Nav -->
+  <header class="gradient-header">
+    <nav class="navbar navbar-expand-lg navbar-light container d-flex justify-content-between">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="Assets/IMG_20231119_211212.jpg" alt="My Logo" />
+        <span class="ms-2 fw-bold text-white">Jeffry</span>
+      </a>
+      <div>
+        <button type="button" onclick="about()" class="btn nav-btns me-2">My Skills</button>
+        <button type="button" onclick="experience()" class="btn nav-btns me-2">Experience</button>
+        <button type="button" onclick="projects()" class="btn nav-btns me-2">Projects</button>
+        <button type="button" onclick="contact()" class="btn nav-btns">Contact</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-section" id="iam">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-7 text-center text-md-start mb-4 mb-md-0 hero-text-col">
+          <h1>Hi, I'm Jeffry</h1>
+          <p>
+            I am <strong>Kaveesh Jeffry Vershan</strong>, a driven and detail-oriented
+            Software Engineering Intern with a passion for coding and problem-solving.
+            Currently pursuing my Bachelor's degree in Software Engineering at
+            CINEC Campus Malabe, I am excited to gain practical experience in
+            developing and optimizing software solutions.
+          </p>
+        </div>
+        <div class="col-12 col-md-5 text-center">
+          <div class="hero-image-wrapper">
+            <img 
+              src="Assets/img 2.png" 
+              alt="Profile" 
+              class="hero-profile-image img-fluid"
+            />
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="row bg-primary " id="iam">
-        <div class=" text-center text-div"> 
-            <h1 class="text-center mt-10 display-3 text-topic" >
-                Hi Im Jeffry
-            </h1>
-            <p class="mt-10 mb-5 about-div" style="margin-top: 8vh;">
-                I am Kaveesh Jeffry Vershan, a driven and detail-oriented 
-                Software Engineering Intern with a passion for coding and 
-                problem-solving. Currently pursuing my Bachelor's degree 
-                in Software Engineering at CINEC Campus Malabe, I am 
-                excited to apply my knowledge and gain practical 
-                experience in developing and optimizing software 
-                solutions. Proficient in languages like Java, C, 
-                and PHP, I ensure precision in coding and uphold a 
-                strong work ethic. Collaboration is key to me, as I 
-                enjoy working effectively with colleagues and quickly 
-                adapting to new technologies. My portfolio showcases 
-                diverse projects ranging from mobile application 
-                development to web application development, reflecting 
-                my versatility and innovative spirit. Beyond academia, 
-                I am actively involved in extracurricular activities 
-                such as teaching at Sunday School and participating in 
-                school societies, fostering personal and professional 
-                growth. Feel free to connect with me via LinkedIn or 
-                GitHub
-            </p>
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <h1>I'm Familiar With</h1>
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/html.svg" alt="HTML" />
+            <h3>HTML</h3>
+          </div>
         </div>
-        <div class="image-div justify-content-center ">
-            
-            <img src="Assets/img 2.png" alt="my image" class="mx-auto d-block img-2">
-            
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/css.svg" alt="CSS" />
+            <h3>CSS</h3>
+          </div>
         </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/php.svg" alt="PHP" />
+            <h3>PHP</h3>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/js.svg" alt="JavaScript" />
+            <h3>JavaScript</h3>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/java.svg" alt="Java" />
+            <h3>Java</h3>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/c.svg" alt="C Language" />
+            <h3>C Language</h3>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/python.svg" alt="Python" />
+            <h3>Python</h3>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/sql.svg" alt="MSSQL" />
+            <h3>MSSQL</h3>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/firebase.svg" alt="Firebase" />
+            <h3>Firebase</h3>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="skill-item">
+            <img src="Assets/android.svg" alt="Android" />
+            <h3>Android</h3>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="row  justify-content-center bg-dark">
+  </section>
 
-        <h1 class="text-center mt-10 display-3  mt-5 text-light" id="skills" style="margin-bottom: 10vh">
-           <b> I'm familiar with </b>
-        </h1>
-        
-        <div class="col-6 col-md-4 col-lg-3 text-center ">
-            <img src="Assets/html.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white" > <b>HTML</b></h3>
+  <!-- Experience -->
+  <section id="experience" class="py-5 text-center" style="background: #f5f5f5;">
+    <div class="container">
+      <h1 class="mb-4">Experience</h1>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="card h-100 shadow-sm border-0 mb-4">
+            <div
+              id="carouselExp1"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExp1"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExp1"
+                  data-bs-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExp1"
+                  data-bs-slide-to="2"
+                ></button>
+              </div>
+              <div
+                class="carousel-inner"
+                style="max-height: 250px; overflow: hidden;"
+              >
+                <div class="carousel-item active">
+                  <img
+                    src="Assets/rangiri-hr1.png"
+                    class="d-block w-100"
+                    alt="HR System Screenshot 1"
+                    style="object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Assets/rangiri-hr2.png"
+                    class="d-block w-100"
+                    alt="HR System Screenshot 2"
+                    style="object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Assets/rangiri-hr3.png"
+                    class="d-block w-100"
+                    alt="HR System Screenshot 3"
+                    style="object-fit: cover;"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExp1"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExp1"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title">Rangiri Holdings</h4>
+              <h6 class="text-muted">
+                Research and Developer Intern (2024)
+              </h6>
+              <p class="card-text mt-3">
+                <strong>Project:</strong> HR Management System  
+                <br />
+                <strong>Tech Stack:</strong> React, Spring Boot, SQL  
+                <br />
+                <strong>Details:</strong> Developed an HR Management System to digitize
+                employee records and automate manual processes. Implemented
+                secure data handling, role-based access, and QR code
+                integration.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-            <img src="Assets/css.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white"> <b>CSS</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-            <img src="Assets/php.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white"> <b>PHP</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-            <img src="Assets/js.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white" > <b>Java Script</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center" >
-            <img src="Assets/java.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white"> <b>Java</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-            <img src="Assets/c.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white "> <b>C language</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-            <img src="Assets/python.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white"> <b>Python</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-            <img src="Assets/sql.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white"> <b>MSSQL</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-            <img src="Assets/firebase.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white"> <b>Firebase</b></h3>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center" >
-            <img src="Assets/android.svg" alt="my image" class="mx-auto d-block ">
-            <h3 class="mt-2 mb-4 text-white"> <b>Android</b></h3>
-        </div>
-        
 
-    </div>  
-
-    <div class="row justify-content-center bg-warning ">
-        <h1 class="text-center mt-5 display-3 justify-content-center  text-dark" id="projects"><b>Projects</b></h1>
-
-        <div class="col-6 col-md-6 col-lg-3 justify-content-center text-center mt-5 " style="position: relative;">
-            <a href="https://github.com/KaveeshJeffry/Perimeter-Calculator"><div class="flash-div "><img src="Assets/1710486483799.jpg" alt="my image" class="mx-auto d-block proj-images">
-                
-            </div></a>
-            <p class="h5 mt-2 ">Perimeter Calculator App</p>
+        <div class="col-12 col-md-6 col-lg-5">
+          <div class="card h-100 shadow-sm border-0 mb-4">
+            <div
+              id="carouselExp2"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExp2"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExp2"
+                  data-bs-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExp2"
+                  data-bs-slide-to="2"
+                ></button>
+              </div>
+              <div
+                class="carousel-inner"
+                style="max-height: 250px; overflow: hidden;"
+              >
+                <div class="carousel-item active">
+                  <img
+                    src="Assets/rangiri-vehicle1.png"
+                    class="d-block w-100"
+                    alt="Vehicle Maint. Screenshot 1"
+                    style="object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Assets/rangiri-vehicle2.png"
+                    class="d-block w-100"
+                    alt="Vehicle Maint. Screenshot 2"
+                    style="object-fit: cover;"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="Assets/rangiri-vehicle3.png"
+                    class="d-block w-100"
+                    alt="Vehicle Maint. Screenshot 3"
+                    style="object-fit: cover;"
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExp2"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExp2"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="card-body d-flex flex-column">
+              <h4 class="card-title">Rangiri Holdings</h4>
+              <h6 class="text-muted">
+                Research and Developer Intern (2024)
+              </h6>
+              <p class="card-text mt-3">
+                <strong>Project:</strong> Vehicle Maintenance System  
+                <br />
+                <strong>Tech Stack:</strong> React.js, Spring Boot, MySQL  
+                <br />
+                <strong>Details:</strong> Designed and developed a system to manage
+                vehicle operations, maintenance, and expenses for
+                businesses, reducing manual effort.
+              </p>
+            </div>
+          </div>
         </div>
-        <div class="col-6 col-md-6 col-lg-3 justify-content-center text-center mt-5 ">
-            <a href="https://github.com/KaveeshJeffry/Foodie-E-commerce-Mobile-Application"><div class="flash-div "><img src="Assets/1710486483814.jpg" alt="my image" class="mx-auto d-block proj-images">
-                
-            </div></a>
-            <p class="h5 mt-2 ">Foodie Food Ordering App</p>
-        </div>
-        <div class="col-12 col-md-12 col-lg-12 justify-content-center text-center mt-5 ">
-            <a href="https://github.com/KaveeshJeffry/Ebook-website"><div class="flash-div "><img src="Assets/1710487030895.jpg" alt="my image" class="mx-auto d-block proj-images-l">
-                
-            </div></a>
-            <p class="h5 mt-2 ">E-Book Selling Website</p>
-        </div>
-        <div class="col-12 col-md-12 col-lg-12 justify-content-center text-center mt-5 ">
-            <a href="https://github.com/KaveeshJeffry/Employee-task-management-Web-application"><div class="flash-div "><img src="Assets/Screenshot 2024-03-15 183143.png" alt="my image" class="mx-auto d-block proj-images-l">
-                
-            </div></a>
-            <p class="h5 mt-2 ">Employee Task Assigning System</p>
-        </div>
+      </div>
     </div>
+  </section>
 
-
-    <div class="bg-black row" id="contact">
-        
-        <div class="col-12 text-white text-center">
-            <h1 class="mt-5 mb-3">Contact Me</h1>
-            <ul class="nav justify-content-center  ">
-                <li class="me-5">
-                    <a href = "mailto:kaveeshgg@gmail.com?subject=I want to contact you&body=Hi">
-                        <img src="Assets/gmail.svg" id="contact-img" style="width: 5vh;" alt="my image" class="mx-auto d-block ">
-                    </a>
-                </li>
-                <li class="me-5">
-                    <a href="https://github.com/KaveeshJeffry">
-                        <img src="Assets/github.svg" id="contact-img" style="width: 5vh;" alt="my image" class="mx-auto d-block ">
-                    </a>
-                </li>
-                <li class="">
-                    <a href="https://www.bing.com/ck/a?!&&p=8827565dacfb0b1dJmltdHM9MTcxMDQ2MDgwMCZpZ3VpZD0xNDU5ZTE1Zi1hNzFlLTZmZTEtMTFlNy1mMmZhYTYxZjZlYTEmaW5zaWQ9NTE4OQ&ptn=3&ver=2&hsh=3&fclid=1459e15f-a71e-6fe1-11e7-f2faa61f6ea1&psq=kaveesh+jeffry&u=a1aHR0cHM6Ly9say5saW5rZWRpbi5jb20vaW4va2F2ZWVzaC1qZWZmcnktNzg0Mjc1MWI3&ntb=1">
-                        <img src="Assets/linkedin.svg" id="contact-img" style="width: 5vh;" alt="my image" class="mx-auto d-block ">
-                    </a>
-                </li>
-            </ul>
-            
-             
-            
-            
+  <!-- Projects -->
+  <section id="projects" class="py-5 text-center" style="background: #ebebeb;">
+    <div class="container">
+      <h1 class="mb-4">Projects</h1>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 shadow-sm border-0 project-card">
+            <img
+              src="Assets/1710486483799.jpg"
+              class="card-img-top"
+              alt="Perimeter Calculator"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Perimeter Calculator App</h5>
+              <p class="card-text">
+                Quickly calculate the perimeter of various shapes on your mobile device.
+              </p>
+              <a
+                href="https://github.com/KaveeshJeffry/Perimeter-Calculator"
+                target="_blank"
+                class="btn btn-primary mt-auto"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
         </div>
-        
-        
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 shadow-sm border-0 project-card">
+            <img
+              src="Assets/1710486483814.jpg"
+              class="card-img-top"
+              alt="Foodie Food Ordering"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Foodie Food Ordering App</h5>
+              <p class="card-text">
+                Mobile e-commerce application for ordering delicious food with auto-search.
+              </p>
+              <a
+                href="https://github.com/KaveeshJeffry/Foodie-E-commerce-Mobile-Application"
+                target="_blank"
+                class="btn btn-primary mt-auto"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 shadow-sm border-0 project-card">
+            <img
+              src="Assets/1710487030895.jpg"
+              class="card-img-top"
+              alt="E-Book Selling Website"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">E-Book Selling Website</h5>
+              <p class="card-text">
+                A user-friendly platform for browsing and purchasing e-books online.
+              </p>
+              <a
+                href="https://github.com/KaveeshJeffry/Ebook-website"
+                target="_blank"
+                class="btn btn-primary mt-auto"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 mb-4">
+          <div class="card h-100 shadow-sm border-0 project-card">
+            <img
+              src="Assets/Screenshot 2024-03-15 183143.png"
+              class="card-img-top"
+              alt="Employee Task System"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Employee Task Assigning System</h5>
+              <p class="card-text">
+                Streamline task assignments and track employee progress using this web app.
+              </p>
+              <a
+                href="https://github.com/KaveeshJeffry/Employee-task-management-Web-application"
+                target="_blank"
+                class="btn btn-primary mt-auto"
+              >
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h1>Contact Me</h1>
+      <div class="contact-icons d-flex justify-content-center align-items-center mt-4">
+        <a
+          href="mailto:kaveeshgg@gmail.com?subject=I want to contact you&body=Hi"
+          target="_blank"
+        >
+          <img src="Assets/gmail.svg" alt="Gmail" />
+        </a>
+        <a href="https://github.com/KaveeshJeffry" target="_blank">
+          <img src="Assets/github.svg" alt="GitHub" />
+        </a>
+        <a href="https://lk.linkedin.com/in/kaveesh-jeffry-7842751b7" target="_blank">
+          <img src="Assets/linkedin.svg" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- Home.js -->
+  <script src="Java Script/Home.js"></script>
 </body>
 </html>
